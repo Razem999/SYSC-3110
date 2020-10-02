@@ -7,12 +7,14 @@ public class AddressBook {
         budInf = new ArrayList<>();
     }
 
+    //Method to add more buddies!
     private void addBuddy(BuddyInfo BI ) {
         if(BI != null) {
             budInf.add(BI);
         }
     }
 
+    //Method to remove buddies :(
     public BuddyInfo removeBuddy(int index) {
         if(index >= 0 && index < budInf.size()) {
             return budInf.remove(index);
