@@ -1,3 +1,4 @@
+//author *Razem Shahin
 import java.util.*;
 
 public class AddressBook {
@@ -22,6 +23,7 @@ public class AddressBook {
         return null;
     }
 
+    //Main method
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
         AddressBook addressBook = new AddressBook();
