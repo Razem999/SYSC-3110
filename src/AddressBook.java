@@ -9,7 +9,7 @@ public class AddressBook {
     }
 
     //Method to add more buddies!
-    private void addBuddy(BuddyInfo BI ) {
+    public void addBuddy(BuddyInfo BI ) {
         if(BI != null) {
             budInf.add(BI);
         }
@@ -23,11 +23,20 @@ public class AddressBook {
         return null;
     }
 
+    private void listBuddies() {
+        for (BuddyInfo buddyInfo : budInf) {
+            System.out.println(buddyInfo.getName());
+        }
+    }
+
     //Main method
     public static void main(String[] args) {
-        BuddyInfo buddy = new BuddyInfo("Tom", "Carleton", "613");
+        BuddyInfo buddy1 = new BuddyInfo("Tom", "Carleton", "613");
+        //BuddyInfo buddy2 = new BuddyInfo("Jerry", "uOttawa", "620");
         AddressBook addressBook = new AddressBook();
-        addressBook.addBuddy(buddy);
+        addressBook.addBuddy(buddy1);
+        //addressBook.addBuddy(buddy2);
+        addressBook.listBuddies();
         addressBook.removeBuddy(0);
         System.out.println("Address Book");
     }
